@@ -12,7 +12,7 @@ load_figure_template("darkly")
 app = dash.Dash(__name__,
                 external_stylesheets=[dbc.themes.DARKLY])
 
-# server = app.server
+server = app.server
 
 df_data = pd.read_csv("supermarket_sales.csv")
 df_data.rename(columns={"gross income": "Faturamento", "Rating": "Avaliação"},
